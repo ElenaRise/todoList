@@ -218,16 +218,13 @@
   <% } %>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root">
-  <div class="shell-loader">
-    <img class="shell-loader__i-logo" src="assets/svg/logo.svg">
-    <div class="shell-loader__spinner-container">
-      <div class="shell-loader__spinner"><span></span></div>
-    </div>
-  </div>
+<div class="todo">
+  <input type="text" class="todo__input" id="todoInput">
+  <button class="todo__btn" id="todoBtnAdd">Add</button>
 </div>
+<noscript>You need to enable JavaScript to run this app.</noscript>
 <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script async="true" src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>
 <script async="true" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
 <% } %>
 </body>

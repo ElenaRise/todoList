@@ -105,11 +105,11 @@ export const generateConfig = (env: IEnvironment): webpack.Configuration => {
   return {
     devtool: 'source-map',
     entry: [
-      './app.tsx',
+      './app.js',
       './styles/app.scss',
     ] as string[],
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      extensions: ['.js', '.jsx', '.ts'],
     },
     output: {
       filename: 'bundle.js',
